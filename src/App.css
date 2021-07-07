@@ -1,3 +1,22 @@
-ul li {
-  list-style-type:upper-roman
+.App {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "h h h" "s c c";
+  grid-template-rows: 150px 1fr;
+  grid-template-columns: 300px 1fr;
+}
+
+.header {
+  grid-area: h;
+  background-color: cadetblue;
+}
+
+.side {
+  grid-area: s;
+  background-color: rgb(75, 185, 248);
+}
+
+.main {
+  grid-area: c;
+  background-color: rgb(194, 207, 231);
 }
