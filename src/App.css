@@ -1,8 +1,10 @@
 .App {
+  max-width: 1200px;
+  margin: 0 auto;
   min-height: 100vh;
   display: grid;
   grid-template-areas: "h h h" "s c c";
-  grid-template-rows: 150px 1fr;
+  grid-template-rows: 100px 1fr;
   grid-template-columns: 300px 1fr;
 }
 
@@ -13,10 +15,14 @@
 
 .side {
   grid-area: s;
-  background-color: rgb(75, 185, 248);
+  background-color: rgb(124, 240, 248);
 }
 
 .main {
   grid-area: c;
   background-color: rgb(194, 207, 231);
+}
+.main-img {
+  display: block;
+  width: 100%;
 }
