@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Technologies from './Technologies';
 
 function App() {
   return (
@@ -10,25 +12,5 @@ function App() {
   );
 }
 
-function Header() {
-  return (
-    <div>
-      <a href="#">Home - </a>
-      <a href="#">News - </a>
-      <a href="#">Contacts </a>
-    </div>
-  )
-}
-
-function Technologies() {
-  return (
-    <ul>
-      <li>html</li>
-      <li>css</li>
-      <li>Javascript</li>
-      <li>React.js</li>
-    </ul>
-  )
-}
 
 export default App;
