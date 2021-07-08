@@ -1,15 +1,16 @@
 import s from './Post.module.css';
 
-const Post = () => {
+const Post = (props) => {
     return (
         <div className={s.post}>
             <img
                 className={s.post__img}
-                src="http://www.thaicybergames.com/dota/images/heroes/9.jpg"
+                src={props.imageSource}
                 alt=""
             />
-            Hello World!
-            <button className={s.button}>Like!</button>
+            {props.text}
+            <br />
+            Likes - {props.likesCount}
         </div>
     )
 }
