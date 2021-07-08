@@ -13,6 +13,9 @@ function App() {
         <Nav />
 
         <Switch>
+          <Route exact path='/'>
+            <Profile />
+          </Route>
           <Route path='/profile'>
             <Profile />
           </Route>

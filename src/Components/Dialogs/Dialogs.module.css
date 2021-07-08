@@ -1,4 +1,18 @@
-.container {
+.dialogs {
     background-color: rgb(194, 207, 231);
-    color: white;
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+}
+
+.dialogsItems {
+    padding: 10px;
+    background-color: rgb(160, 187, 238);
+}
+
+.userDialog, .message {
+    margin: 10px;
+}
+
+.messages {
+    padding: 10px;
 }
