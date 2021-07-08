@@ -7,12 +7,12 @@ const Profile = () => {
             <div>
                 ava + descriptions
             </div>
-            <div>
+            <div className='posts'>
                 My Posts
-                <div>
+                <div className={s.post}>
                     Hello World!
                 </div>
-                <div>
+                <div className={s.post}>
                     How are you?
                 </div>
             </div>
