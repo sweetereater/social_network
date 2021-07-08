@@ -1,0 +1,9 @@
+.main {
+    grid-area: c;
+    background-color: rgb(194, 207, 231);
+}
+
+.main img {
+    display: block;
+    width: 100%;
+}

@@ -1,6 +1,8 @@
+import s from './Nav.module.css';
+
 const Nav = () => {
     return (
-        <nav className="side">
+        <nav className={s.nav}>
             <div>Profile</div>
             <div>Messages</div>
             <div>News</div>

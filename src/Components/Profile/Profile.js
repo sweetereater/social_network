@@ -1,7 +1,9 @@
+import s from './Profile.module.css';
+
 const Profile = () => {
     return (
-        <main className="main">
-            <img className="main-img" src="https://klike.net/uploads/posts/2019-06/1559370578_1.jpg" alt="" />
+        <main className={s.main}>
+            <img src="https://klike.net/uploads/posts/2019-06/1559370578_1.jpg" alt="" />
             <div>
                 ava + descriptions
             </div>
