@@ -13,6 +13,14 @@
     margin: 10px;
 }
 
+.userDialog a {
+    text-decoration: none;
+}
+
+.activeDialog {
+    color:red
+}
+
 .messages {
     padding: 10px;
 }

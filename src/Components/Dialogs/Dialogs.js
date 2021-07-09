@@ -1,26 +1,22 @@
 import s from './Dialogs.module.css';
+import UserDialog from './UserDialog/UserDialog';
+import Message from './Message/Message';
 
 const Dialogs = () => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <div className={s.userDialog}>
-                    Nadya
-                </div>
-                <div className={s.userDialog}>
-                    Oleg
-                </div>
-                <div className={s.userDialog}>
-                    Artem
-                </div>
-                <div className={s.userDialog}>
-                    Elya
-                </div>
+                <UserDialog id={1} name="Nadya" />
+                <UserDialog id={2} name="Oleg" />
+                <UserDialog id={5} name="Ilya" />
+                <UserDialog id={3} name="Artem" />
+                <UserDialog asd id={4} name="Elya" />
             </div>
             <div className={s.messages}>
-                <div className={s.message}>Heyyooo!</div>
-                <div className={s.message}>How do you do you?</div>
-                <div className={s.message}>Dzzzip Dzaaap</div>
+                <Message text="Heyyooo!" />
+                <Message text="How do you do you?" />
+                <Message text="Dzzzip Dzaaap" />
+                <Message text="Piu piu... piu piu piu!" />
             </div>
         </div>
     )
