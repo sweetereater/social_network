@@ -5,7 +5,10 @@ import Header from './Components/Header/Header';
 import Dialogs from './Components/Dialogs/Dialogs';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-function App() {
+
+
+
+function App({ dialogsData, messages, posts }) {
   return (
     <Router>
       <div className="App">
@@ -13,14 +16,11 @@ function App() {
         <Nav />
 
         <Switch>
-          <Route exact path='/'>
-            <Profile />
-          </Route>
           <Route path='/profile'>
-            <Profile />
+            <Profile posts={posts} />
           </Route>
           <Route path='/messages'>
-            <Dialogs />
+            <Dialogs dialogs={dialogsData} messages={messages} />
           </Route>
         </Switch>
       </div>
