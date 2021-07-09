@@ -8,19 +8,19 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 
 
-function App({ dialogsData, messages, posts }) {
+function App(props) {
   return (
     <Router>
       <div className="App">
         <Header />
         <Nav />
-
         <Switch>
           <Route path='/profile'>
-            <Profile posts={posts} />
+            <Profile posts={props.state.profilePage.postsData} />
           </Route>
           <Route path='/messages'>
-            <Dialogs dialogs={dialogsData} messages={messages} />
+            <Dialogs
+              data={props.state.dialogsPage} />
           </Route>
         </Switch>
       </div>
