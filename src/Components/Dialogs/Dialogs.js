@@ -3,20 +3,32 @@ import UserDialog from './UserDialog/UserDialog';
 import Message from './Message/Message';
 
 const Dialogs = () => {
+    const dialogsData = [
+        { id: 1, name: "Nadya" },
+        { id: 2, name: "Oleg" },
+        { id: 3, name: "Artem" },
+        { id: 4, name: "Elya" },
+        { id: 5, name: "Ilya" },
+    ]
+
+    const messages = [
+        { id: 1, text: "Heyyooo!" },
+        { id: 2, text: "How do you do you?" },
+        { id: 3, text: "Dzzzip Dzaaap" },
+        { id: 4, text: "Piu piu... piu piu piu!" },
+        { id: 5, text: 'Meeeowww ~~' },
+    ]
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <UserDialog id={1} name="Nadya" />
-                <UserDialog id={2} name="Oleg" />
-                <UserDialog id={5} name="Ilya" />
-                <UserDialog id={3} name="Artem" />
-                <UserDialog asd id={4} name="Elya" />
+                {dialogsData.map(dialog => {
+                    return <UserDialog key={dialog.id} id={dialog.id} name={dialog.name} />
+                })}
             </div>
             <div className={s.messages}>
-                <Message text="Heyyooo!" />
-                <Message text="How do you do you?" />
-                <Message text="Dzzzip Dzaaap" />
-                <Message text="Piu piu... piu piu piu!" />
+                {messages.map(msg => {
+                    return <Message key={msg.id} text={msg.text} />
+                })}
             </div>
         </div>
     )
