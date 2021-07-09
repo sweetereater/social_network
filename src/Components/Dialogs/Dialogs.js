@@ -18,6 +18,7 @@ const Dialogs = () => {
         { id: 4, text: "Piu piu... piu piu piu!" },
         { id: 5, text: 'Meeeowww ~~' },
     ]
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
