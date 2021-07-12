@@ -15,9 +15,8 @@ const MyPosts = (props) => {
         />
     })
 
-    const addNewPost = () => {
-        const text = textField.current.value;
-        props.addPost(text);
+    const addNewPost = (event) => {
+        props.addPost(props.newPostText);
         textField.current.value = "";
     }
 
@@ -26,7 +25,11 @@ const MyPosts = (props) => {
             My Posts
             <div>
                 <div>
-                    <textarea ref={textField} cols="50" rows="5"></textarea>
+                    <textarea
+                        ref={textField}
+                        value={props.newPostText}
+                        onChange={props.onNewPostTextChange}
+                    />
                 </div>
                 <div>
                     <button onClick={addNewPost}>Add new post</button>

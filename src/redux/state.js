@@ -1,6 +1,8 @@
+import { rerenderEntireTree } from "./render";
+
 const data = {
     profilePage: {
-        postsData: [
+        posts: [
             {
                 id: 1,
                 text: "Hello World!",
@@ -33,6 +35,7 @@ const data = {
             },
 
         ],
+        newPostText: "it-kamasutra :)"
     },
     dialogsPage: {
         dialogsData: [
@@ -55,18 +58,22 @@ const data = {
 const addPost = (postText) => {
     const randomNum = Math.floor(Math.random() * 100);
     const newPost = {
-        id: data.profilePage.postsData.length + 1,
+        id: data.profilePage.posts.length + 1,
         text: postText,
         likesCount: 0,
         imgSrc: `http://www.thaicybergames.com/dota/images/heroes/${randomNum}.jpg`
     }
 
-    data.profilePage.postsData.push(newPost)
-    console.log(data.profilePage.postsData);
+    data.profilePage.posts.push(newPost);
+    rerenderEntireTree(data);
 }
 
+const onPostTextChange = (e) => {
+    data.profilePage.newPostText = e.currentTarget.value;
+    rerenderEntireTree(data);
+}
 
-export { addPost };
+export { addPost, onPostTextChange };
 
 
 export default data;

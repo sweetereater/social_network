@@ -16,8 +16,9 @@ function App(props) {
         <Switch>
           <Route path='/profile'>
             <Profile
-              posts={props.state.profilePage.postsData}
+              profilePage={props.state.profilePage}
               addPost={props.addPost}
+              handlePostChange={props.onPostTextChange}
             />
           </Route>
           <Route path='/messages'>
