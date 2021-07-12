@@ -17,7 +17,6 @@ const MyPosts = (props) => {
 
     const addNewPost = (event) => {
         props.addPost(props.newPostText);
-        textField.current.value = "";
     }
 
     return (

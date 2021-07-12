@@ -65,7 +65,9 @@ const addPost = (postText) => {
     }
 
     data.profilePage.posts.push(newPost);
+    data.profilePage.newPostText = "";
     rerenderEntireTree(data);
+
 }
 
 const onPostTextChange = (e) => {
