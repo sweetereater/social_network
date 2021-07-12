@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from "./render";
+let rerenderEntireTree = () => {
+    console.log('bib');
+}
 
 const data = {
     profilePage: {
@@ -55,7 +57,9 @@ const data = {
     }
 };
 
-const addPost = (postText) => {
+window.data = data;
+
+export const addPost = (postText) => {
     const randomNum = Math.floor(Math.random() * 100);
     const newPost = {
         id: data.profilePage.posts.length + 1,
@@ -70,12 +74,14 @@ const addPost = (postText) => {
 
 }
 
-const onPostTextChange = (e) => {
+export const onPostTextChange = (e) => {
     data.profilePage.newPostText = e.currentTarget.value;
     rerenderEntireTree(data);
 }
 
-export { addPost, onPostTextChange };
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
+}
 
 
 export default data;
