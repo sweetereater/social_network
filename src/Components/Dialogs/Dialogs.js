@@ -4,17 +4,21 @@ import Message from './Message/Message';
 
 const Dialogs = ({ data }) => {
 
+    const dialogsView = data.dialogsData.map(dialog => {
+        return <UserDialog key={dialog.id} id={dialog.id} name={dialog.name} />
+    });
+
+    const messagesView = data.messages.map(msg => {
+        return <Message key={msg.id} text={msg.text} />
+    });
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                {data.dialogsData.map(dialog => {
-                    return <UserDialog key={dialog.id} id={dialog.id} name={dialog.name} />
-                })}
+                {dialogsView}
             </div>
             <div className={s.messages}>
-                {data.messages.map(msg => {
-                    return <Message key={msg.id} text={msg.text} />
-                })}
+                {messagesView}
             </div>
         </div>
     )
