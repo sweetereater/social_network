@@ -15,7 +15,10 @@ function App(props) {
         <Nav />
         <Switch>
           <Route path='/profile'>
-            <Profile posts={props.state.profilePage.postsData} />
+            <Profile
+              posts={props.state.profilePage.postsData}
+              addPost={props.addPost}
+            />
           </Route>
           <Route path='/messages'>
             <Dialogs

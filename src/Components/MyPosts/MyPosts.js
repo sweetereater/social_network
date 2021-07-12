@@ -15,9 +15,10 @@ const MyPosts = (props) => {
         />
     })
 
-    const alertSomething = () => {
+    const addNewPost = () => {
         const text = textField.current.value;
-        alert(text);
+        props.addPost(text);
+        textField.current.value = "";
     }
 
     return (
@@ -28,7 +29,7 @@ const MyPosts = (props) => {
                     <textarea ref={textField} cols="50" rows="5"></textarea>
                 </div>
                 <div>
-                    <button onClick={alertSomething}>Add new post</button>
+                    <button onClick={addNewPost}>Add new post</button>
                 </div>
             </div>
             {myPosts}

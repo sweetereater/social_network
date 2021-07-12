@@ -52,7 +52,21 @@ const data = {
     }
 };
 
+const addPost = (postText) => {
+    const randomNum = Math.floor(Math.random() * 100);
+    const newPost = {
+        id: data.profilePage.postsData.length + 1,
+        text: postText,
+        likesCount: 0,
+        imgSrc: `http://www.thaicybergames.com/dota/images/heroes/${randomNum}.jpg`
+    }
 
+    data.profilePage.postsData.push(newPost)
+    console.log(data.profilePage.postsData);
+}
+
+
+export { addPost };
 
 
 export default data;
